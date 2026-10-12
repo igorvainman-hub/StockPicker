@@ -13,9 +13,11 @@ def run():
     """
     Run the crew.
     """
+    now = datetime.now()
     inputs = {
         'sector': 'Technology',
-        'current_date': str(datetime.now().date()),
+        'current_date': str(now.date()),
+        'run_id': now.strftime('%Y%m%d_%H%M%S_%f'),
     }
 
     try:
